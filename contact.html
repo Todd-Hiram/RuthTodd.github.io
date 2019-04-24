@@ -48,7 +48,37 @@
 <!-- CONTENT HERE -->
     <main>
         <h1>Contact</h1>
-        <p>The page name should almost exactly match the menu item. </p>
+        <p>Please send a message if you are interested in my services!</p>
+        
+        <form>
+            <fieldset>
+                <legend>
+                    <b><span>Your contact information:</span></b>
+                </legend>
+                
+                <label>
+                    <b>
+                        <span>Fullname:</span>
+                    </b>
+                    <input type="text" name="fullname" placeholder="Full Name" pattern="[a-zA-Z-._] {3,99}" required>
+                </label>
+                
+                <label>
+                    <b>
+                        <span>Email:</span>
+                    </b>
+                    <input formaction="/FormToEmail.html" name="email" type="email" id="contact" placeholder="Email" required>
+                </label>
+            </fieldset>
+            
+            <fieldset>
+                <legend>
+                    <b><span>Message:</span></b>
+                </legend>
+                <textarea rows="6" cols="50" name="textarea" placeholder="Type here..."></textarea>
+                <input type="submit" value="Submit" name="button">
+            </fieldset>
+        </form>
     </main>
     
 <!-- FOOTER HERE -->   
