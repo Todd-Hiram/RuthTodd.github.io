@@ -22,7 +22,7 @@ header {
     font-family: 'Righteous', cursive;
 }
 header h1 {margin: 0;}
-header h2 {margin: 0; font-weight: normal;}
+header h2 {margin: 0; font-weight: normal; font-family: 'Open Sans Condensed', sans-serif;}
 
 /*----------- NAVIGATION --------------*/
 nav {
@@ -69,12 +69,27 @@ main {
 }
 
 main p {
-    font-family: 'Cormorant Unicase', serif;
+/*    font-family: 'Cormorant Unicase', serif;*/
+/*    font-family: 'Montserrat', sans-serif;*/
+    font-family: 'Open Sans Condensed', sans-serif;
     font-size: 20px;
 }
 
 main h1 {
     font-family: 'Righteous', cursive;
+}
+
+main img {
+    border: solid white; 
+    border-radius: 2rem;
+}
+
+#image {
+    display: inline-block;
+    margin: 1px;
+    padding: 40px;
+    width: 100%;
+    text-align: center;
 }
 
 /*----------- FOOTER --------------*/
@@ -85,7 +100,6 @@ footer {
     border-radius: 0.5rem;
     font-family: 'Righteous', cursive;
 }
-
 
 /*----- Clearfix: Force an Element not to collapse -----*/
 .clearfix:after {

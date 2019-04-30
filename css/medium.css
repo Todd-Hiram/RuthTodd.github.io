@@ -19,8 +19,18 @@
 
 
 /*----------- MAIN --------------*/
+div .bio {
+    display: inline-grid;
+    margin: auto;
+    padding: inherit;
+    float: right;
+    width: 60%;
+}
 
-
+#image {
+    display: inline-grid;
+    width: 40%;
+}
 
 /*----------- FOOTER --------------*/
     
