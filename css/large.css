@@ -19,7 +19,11 @@
 
 
 /*----------- MAIN --------------*/
-
+div.gallery {
+    display: inline-grid;
+    position: relative;
+    right: 60px;
+}
 
 
 /*----------- FOOTER --------------*/

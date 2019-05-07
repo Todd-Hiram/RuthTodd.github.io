@@ -61,7 +61,13 @@ nav ul li.active a {
     color: #fff;
 }
 /*----------- MAIN --------------*/
+* {
+    box-sizing: border-box;
+    font-family: 'Passion One', sans-serif;
+} 
+
 main {
+    
     padding: 2rem 4%;
     min-height: 10rem;
     border: solid #579C87;
@@ -84,16 +90,16 @@ main img {
     border-radius: 2rem;
 }
 
-#image {
+div#image {
     display: inline-block;
     margin: 1px;
-    padding: 40px;
+    padding: 30px;
     width: 100%;
     text-align: center;
 }
 
 .contact {
-    display: inline-block;
+    display: flex;
     padding: 2px;
 }
 
@@ -108,6 +114,75 @@ fieldset {
     border-radius: 0.5em;
     padding: 0.5em;
 }
+
+div.gallery {
+    display: inline-grid;
+    padding: 40px;
+
+}
+
+div#gallery {
+    margin: 5px;
+    padding: 95px;
+    float:right;
+    width: 100%;
+}
+
+dvi#gallery:hover {
+    border: 1px solid #777;
+}
+
+div#gallery img {
+    padding: 15px;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+/*------- transition photos -------*/
+.image01:hover {
+    transition: all 1s;
+    transform: scale(1.2);
+}
+
+.image02:hover {
+    transition: all 1s;
+    transform: scale(1.2);
+}
+
+.image03:hover {
+    transition: all 1s;
+    transform: scale(1.2);
+}
+
+.image04:hover {
+    transition: all 1s;
+    transform: scale(1.2);
+}
+
+.image05:hover {
+    transition: all 1s;
+    transform: scale(1.2);
+}
+
+.image06:hover {
+    transition: all 1s;
+    transform: scale(1.2);
+}
+
+/*
+.photo01 { grid-area: 1 / 3 / 2 / 4; }
+
+.image02 { grid-area: 2 / 3 / 3 / 4; }
+
+.image03 { grid-area: 1 / 1 / 2 / 2; }
+
+.image04 { grid-area: 1 / 2 / 2 / 3; }
+
+.image05 { grid-area: 2 / 2 / 3 / 3; }
+*/
 
 /*----------- FOOTER --------------*/
 footer {
