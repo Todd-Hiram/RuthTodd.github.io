@@ -31,19 +31,14 @@ div.bio {
     
 div.gallery {
     display: inline-grid;
-    
-}
-    
-
-div#gallery {
-    
+    position: relative;
+    right: 35px;
 }
     
 div#gallery {
+    float: inherit;
     margin: 2px;
-    padding: 1px;
-    border: 1px solid #ccc;
-    float:right;
+    padding: 50px;
 }
 
     

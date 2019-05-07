@@ -122,10 +122,9 @@ div.gallery {
 }
 
 div#gallery {
-    margin: 5px;
-    padding: 95px;
-    float:right;
+    float: right;
     width: 100%;
+    padding: 5rem;
 }
 
 dvi#gallery:hover {
