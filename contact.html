@@ -1,37 +1,45 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="description" content="BYU-Idaho Senior Practicum">
-<meta name="Hiram Todd" content="John Doe">
+    <meta charset="utf-8">
+    <meta name="description" content="BYU-Idaho Senior Practicum">
+    <meta name="Hiram Todd" content="John Doe">
 
-<title>Ruth Todd's Portfolio</title>
+    <title>Ruth Todd's Portfolio</title>
 
-<!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
-<!-- STYLE SHEETS -->
-<link href="css/normalize.css" rel="stylesheet">
-<!-- phone-default -->
-<link href="css/small.css" rel="stylesheet">
-<!-- enhance-tablet -->
-<link href="css/medium.css" rel="stylesheet">
-<!-- enhance-desktop -->
-<link href="css/large.css" rel="stylesheet">
+    <!-- STYLE SHEETS -->
+    <link href="css/normalize.css" rel="stylesheet">
+    <!-- phone-default -->
+    <link href="css/small.css" rel="stylesheet">
+    <!-- enhance-tablet -->
+    <link href="css/medium.css" rel="stylesheet">
+    <!-- enhance-desktop -->
+    <link href="css/large.css" rel="stylesheet">
 
-<!-- Embeded Font -->
-<!--<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">-->
-<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Cormorant+Unicase" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <!-- Embeded Font -->
+    <!--<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Unicase" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    
+    <script src="js/freecontactformvalidation.js"></script>
+    <script>
+        required.add('Full_Name','NOT_EMPTY','Full Name');
+        required.add('Email_Address','EMAIL','Email Address');
+        required.add('Your_Message','NOT_EMPTY','Your Message');
+        required.add('AnitSpam','NOT_EMPTY','Anti-Spam Question');
+    </script>
 
 </head>
 <body>
 <!-- HEADER HERE -->
 	<header>
- <h1>Ruth Todd</h1>
+        <h1>Ruth Todd</h1>
         <h2>Life drawing is my life!</h2>
     </header>
     
@@ -52,34 +60,80 @@
         <h1>Contact</h1>
         <p>Please send a message if you are interested in my services!</p>
         
-        <form>
-            <div  class="contact">
-            <fieldset>
-                <legend>
-                    <b><span>Your contact information:</span></b>
-                </legend>
-                
-                <label>
-                    <b><span>Fullname:</span></b>
-                    <input type="text" name="fullname" placeholder="Full Name" pattern="[a-zA-Z-._] {3,99}" required>
-                </label>
-                
-                <label>
-                    <b><span>Email:</span></b>
-                    <input formaction="/FormToEmail.html" name="email" type="email" id="contact" placeholder="Email" required>
-                </label>
-            </fieldset>
-            
-            <fieldset>
-                <legend>
-                    <b><span>Message:</span></b>
-                </legend>
-                <textarea rows="6" cols="40" name="textarea" placeholder="Type here..."></textarea>
-                <input type="submit" value="Submit" name="button">
-            </fieldset>
-            </div>
-        </form>
-    </main>
+        <form name="freecontactform" method="post" action="freecontactformprocess.php" onsubmit="return validate.check(this)">
+	<table width="400px" class="freecontactform">
+	   <tbody><tr>
+         <td colspan="2">
+
+         <div class="freecontactformheader">Contact Us Form</div>
+
+        <div class="freecontactformmessage">Fields marked with <span class="required_star"> * </span> are mandatory.
+        </div>
+
+         </td>
+        </tr>
+        <tr>
+         <td valign="top">
+          <label for="Full_Name" class="required">Full Name<span class="required_star"> * </span></label>
+         </td>
+         <td valign="top">
+          <input type="text" name="Full_Name" id="Full_Name" maxlength="80" style="width:230px">
+         </td>
+        </tr>
+        <tr>
+         <td valign="top">
+          <label for="Email_Address" class="required">Email Address<span class="required_star"> * </span></label>
+         </td>
+         <td valign="top">
+          <input type="text" name="Email_Address" id="Email_Address" maxlength="100" style="width:230px">
+         </td>
+        </tr>
+        <tr>
+         <td valign="top">
+          <label for="Telephone_Number" class="not-required">Telephone Number</label>
+         </td>
+         <td valign="top">
+          <input type="text" name="Telephone_Number" id="Telephone_Number" maxlength="100" style="width:230px">
+         </td>
+        </tr>
+        <tr>
+         <td valign="top">
+          <label for="Your_Message" class="required">Your Message<span class="required_star"> * </span></label>
+         </td>
+         <td valign="top">
+          <textarea style="width:230px;height:160px" name="Your_Message" id="Your_Message" maxlength="2000"></textarea>
+         </td>
+        </tr>
+        <tr>
+         <td colspan="2" style="text-align:center">
+          <div class="antispammessage">
+          To help prevent automated spam, please answer this question
+          <br><br>
+              <div class="antispamquestion">
+               <span class="required_star"> * </span>
+               Using only numbers, what is 10 plus 15? &nbsp; 
+               <input type="text" name="AntiSpam" id="AntiSpam" maxlength="100" style="width:30px">
+              </div>
+          </div>
+         </td>
+        </tr>
+        <tr>
+         <td colspan="2" style="text-align:center">
+         <br><br>
+          <input type="submit" value=" Submit Form " style="width:200px;height:40px">
+          <br><br>
+          <!-- 
+          If you want to remove this author link, 
+          please purchase an unbranded version from: https://www.freecontactform.com/unbranded_form.php 
+          Or upgrade to the more professional version at: https://www.freecontactform.com/responsive_form.php
+          -->
+          <div>Form provided by: <a href="https://www.freecontactform.com" target="_blank" rel="nofollow">FreeContactForm.com</a></div>
+          <br><br>
+         </td>
+        </tr>
+        </tbody>
+        </table>
+	</form>
     
 <!-- FOOTER HERE -->   
     <footer>
@@ -88,3 +142,6 @@
 
 </body>
 </html>
+    
+    
+<!--    https://www.freecontactform.com/email_form.php-->
