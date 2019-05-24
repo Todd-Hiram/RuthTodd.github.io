@@ -117,13 +117,13 @@ fieldset {
 
 div.gallery {
     display: inline-grid;
-    padding: 40px;
+    padding: 2px;
 }
 
 div#gallery {
-    float: right;
+    float: left;
     width: 100%;
-    padding: 5rem;
+    padding: 45px;
 }
 
 dvi#gallery:hover {
