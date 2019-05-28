@@ -21,8 +21,16 @@ header {
 /*    font-family: 'Dancing Script', cursive;*/
     font-family: 'Righteous', cursive;
 }
-header h1 {margin: 0;}
-header h2 {margin: 0; font-weight: normal; font-family: 'Open Sans Condensed', sans-serif;}
+
+header h1 {
+    margin: 0;
+}
+
+header h2 {
+    margin: 0; 
+    font-weight: normal; 
+    font-family: 'Open Sans Condensed', sans-serif;
+}
 
 /*----------- NAVIGATION --------------*/
 nav {
@@ -60,6 +68,7 @@ nav ul li.active a {
     background-color: #8D592D;
     color: #fff;
 }
+
 /*----------- MAIN --------------*/
 * {
     box-sizing: border-box;
@@ -67,7 +76,6 @@ nav ul li.active a {
 } 
 
 main {
-    
     padding: 2rem 4%;
     min-height: 10rem;
     border: solid #579C87;
