@@ -31,8 +31,7 @@ div.bio {
     
 div.gallery {
     display: inline-grid;
-    position: relative;
-    right: 35px;
+    padding: 50px;
 }
     
 div#gallery {
